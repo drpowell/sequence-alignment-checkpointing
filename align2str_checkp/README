@@ -1,0 +1,52 @@
+Copyright (c) David Powell <david@drp.id.au>
+
+  This package is provided under he GNU Public License v2 and
+  comes with ABSOLUTELY NO WARRANTY, or details see file COPYRIGHT
+
+
+
+This package contains 4 programs for aligning sequences
+using simple edit distance costs.
+
+
+dpa_2str:
+  Calculates the edit distance, and displays an optimal
+  alignment between two sequences.  Uses the standard DPA.
+  Has time and space complexity of O(n*n).
+
+
+dpa_checkp:
+  Calculates the edit distance, and displays an optimal
+  alignment between two sequences.  Uses the
+  check-pointing(1) to recover the alignment. Has time
+  complexity O(n*n), and space complexity O(n).
+
+
+ukk_2str:
+  Calculates the edit distance between two strings, _but_
+  does not recover an alignment.  This program uses
+  Ukkonen's algorithm(2).  Has average time complexity of
+  O(d*d + n), and space complexity O(d)   (where d is the
+  edit distance)
+
+  
+ukk_checkp:
+  Calculates the edit distance between two strings, and
+  displays an optimal alignment.  This program uses
+  Ukkonen's algorithm(2) with check-pointing(1) to recover
+  the alignment.  The average time complexity is 
+  O(n*log(d) + d*d), and space complexity is O(d) (where d
+  is the edit distance)
+
+
+
+1:  D. R. Powell, L. Allison and T. I. Dix,
+    "A Versatile Divide and Conquer Technique for Optimal String Alignment",
+    Information Processing Letters, 1999, 70:3, pp 127-139
+
+2:  E. Ukkonen, "On Approximate String Matching",
+    Foundations of Computation Theory, 1983, 158, pp 487-495
+
+
+-- David Powell <david@drp.id.au>
+
